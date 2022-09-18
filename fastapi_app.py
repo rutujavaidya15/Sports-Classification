@@ -20,10 +20,10 @@ async def custom_vision_classifier(file: UploadFile = File(...)):
     with open(r"testing/temp1.jpg", "wb") as f:
         shutil.copyfileobj(file.file, f)
 
-    ENDPOINT = "https://rvobjdetection-prediction.cognitiveservices.azure.com"
-    prediction_key = "ac50ca2e03b7451cbc8444e1aa314be6"
-    project_id = "4eafbb3b-ae29-4ce2-985f-ec042d16ba60"
-    publish_iteration_name = "Iteration1"
+    ENDPOINT = "Enter prediction endpoint"
+    prediction_key = "Enter prediction key"
+    project_id = "Enter project id"
+    publish_iteration_name = "Enter iteration name"
 
     prediction_credentials = ApiKeyCredentials(in_headers = {"Prediction-key": prediction_key})
     predictor = CustomVisionPredictionClient(ENDPOINT, prediction_credentials)
